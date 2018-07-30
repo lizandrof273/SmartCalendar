@@ -1,0 +1,32 @@
+<!--welcome.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <script type ="text/python" src="main.py"></script>
+    <link rel="stylesheet" type="text/html" href="results.html">
+  </head>
+  <body>
+    <div id="Calendar">
+      <p id="Calendar-day"></p>
+      <p id="Calendar-date"></p>
+      <p id="Calendar-month-year"></p>
+    </div> 
+    <h2>Welcome to the SmartCalendar!</h2>
+    <form method="post" action="/Calendar">
+      Line 1 of Calendar:<br>
+    <input type="text" name="ConcreteEvents" value="{{ConcreteEvents}}">
+      <br>
+    <input type="text" name="FlexableEvents" value={{FlexableEvents}}>
+      <br>
+      Meme Type:<br>
+       <select name="meme-type">
+        <option value="college-grad">Happy College Grad
+        <option value="CardiB"> UMMM
+        <option value="why you lyin"> why you always lyin?
+        </option>
+        </select>
+      <input type="submit" value="Go!">
+    </form>
+  </body>
+</html>
