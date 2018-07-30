@@ -1,0 +1,2 @@
+# SmartCalender
+This helps optimize the time of the user. It breaks down the user’s schedule of the week and helps them accomplish everything they want. By giving it deadlines it spreads out the task and allows the user to achieve their goals. This will help with time management and organization. It will be a great resource for students and professionals to make them more productive. We will be working in the category: lifestyle/productivity. 
