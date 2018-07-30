@@ -1,11 +1,11 @@
-runtime: python 27
+runtime: python27
 api_version: 1
 threadsafe: true
 
 handlers:
-  -url: /.*
+- url: /.*
   script: main.app
 
 libraries:
-  -name: jinja2
+- name: jinja2
   version: latest
