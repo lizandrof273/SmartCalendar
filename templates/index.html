@@ -1,23 +1,22 @@
 <!--welcome.html-->
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Calendar</title>
-  <script type="text/python" src="main.py"></script>
-  <link rel="stylesheet" type="text/html" href="results.html">
-</head>
-
-<body>
-  <div id="Calendar">
-    <p id="Calendar-day"></p>
-    <p id="Calendar-date"></p>
-    <p id="Calendar-month-year"></p>
-  </div>
-  <h2>
+  <head>
+    <title>Calendar</title>
+    <script type ="text/python" src="main.py"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div id="Calendar">
+      <p id="Calendar-day"></p>
+      <p id="Calendar-date"></p>
+      <p id="Calendar-month-year"></p>
+    </div>
+    <h2>
     <center>Welcome to the Smart Calendar!</center>
   </h2>
   <a href="logout_url">Logout</a>
+  <p>
   <center> Event Name: </center>
   <center><input type="text" name="ConcreteEvents" value="{{ConcreteEvents}}"></center>
   <br>
@@ -34,6 +33,7 @@
     </select>
     <center><input type="submit" value="Go!"></center>
     </form>
+  </p>
 </body>
 
 </html>
