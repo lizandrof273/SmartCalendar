@@ -27,8 +27,8 @@
       </div>
       <div class="form-element">
         <label>Event Type:</label>
-        <select name="event-type">
-         <option value="">
+        <select name="event-type" id="event-type">
+         <option value="">Select One ...</option>
          <option value="ConcreteEvents">Concrete Events
          <option value="FlexibleEvents"> Flexible Events</option>
         </select>
@@ -36,7 +36,7 @@
           <input type="submit" value="Go!">
         </div>
       </div>
-      <div>
+      <div id="concrete-inputs">
         <div class="form-element">
           <label>Event Time:</label>
           <input type="time" name="EventTime">
@@ -48,7 +48,7 @@
           <input type="submit" value="Submit">
         </div>
       </div>
-      <div>
+      <div id="flexible-inputs">
         <div>
           <lable>Days of the week:</label>
         </div>
@@ -73,7 +73,12 @@
     </div>
   </div>
     <script type="text/javascript">
-    let chooser = document.element.
+    let eventType = document.getElementById('event-type').value;
+
+    classList.add('hidden')
+    console.log (ConcreteEvents)
+    classList.add("ConcreteEvents")
+    classList.remove("FlexibleEvents")
     </script>
 </body>
 
