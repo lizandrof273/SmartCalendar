@@ -40,15 +40,6 @@ class Event(ndb.Model):
     organizer = ndb.StringProperty(required=True)
     title = ndb.StringProperty(required=True)
 
-
-event_date = EventDate
-event_name = EventName
-
-
-
-params = urllib.urlencode({'text': event_name, 'dates': event_date,})
-new_url = urllib.urlopen("https://www.google.com/calendar/render?action=TEMPLATE&")
-
 Event(organizer=user.user_id(), title="CSSI Presentations")
 
 app = webapp2.WSGIApplication([
