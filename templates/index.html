@@ -1,43 +1,54 @@
 <!--welcome.html-->
 <!DOCTYPE html>
 <html>
-  <head>
-    <form align="right" name="form1" method="post" action="log_out.php">
+
+<head>
+  <form align="right" name="form1" method="post" action="log_out.php">
     <label>
     <input name="submit2" type="submit" id="submit2" value="Logout">
     </label>
   </form>
-    <title>Calendar</title>
-    <script type ="text/python" src="main.py"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
+  <title>Calendar</title>
+  <script type="text/python" src="main.py"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="main">
     <div id="Calendar">
       <p id="Calendar-day"></p>
       <p id="Calendar-date"></p>
       <p id="Calendar-month-year"></p>
     </div>
     <h2>
-    <center>Welcome to the Smart Calendar!</center>
+    Welcome to the Smart Calendar!
   </h2>
-  <p>
-  <center> Event Name: </center>
-  <center><input type="text" name="EventName" value="{{ConcreteEvent}}"></center>
-  <br>
-  <center> Event Time: </center>
-  <center><input type="text" name="EventTime" value={{Event_time}}></center>
-  <br>
-  <center> Event Date: </center>
-  <center><input type="text" name="EventDate" value={{Event_date}}></center>
-  <br>
-  <center> Event Type:<br></center>
-  <center><select name="event-type"></center>
-     <center><option value="ConcreteEvents">Concrete Events</center>
-     <center><option value="FlexibleEvents"> Flexible Events</center></option>
-    </select>
-    <center><input type="submit" value="Go!"></center>
-    </form>
-  </p>
+    <div id="input-form">
+      <div class="form-element">
+        Event Name:
+        <input type="text" name="ConcreteEvents" value="{{ConcreteEvents}}">
+      </div>
+      <div class="form-element">
+        Event Time:
+        <input type="time" name="EventTime" value={{Event_time}}>
+      </div>
+      <div class="form-element">
+        Event Date:
+        <input type="date" name="EventDate" value={{Event_date}}>
+      </div>
+      <div class="form-element">
+        Event Type:
+        <select name="event-type">
+         <option value="ConcreteEvents">Concrete Events
+         <option value="FlexibleEvents"> Flexible Events</option>
+        </select>
+      </div>
+      <div class="form-element">
+        <input type="submit" value="Go!">
+      </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

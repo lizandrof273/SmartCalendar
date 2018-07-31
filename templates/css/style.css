@@ -1,6 +1,19 @@
 body {
     background-color: LemonChiffon;
 }
+#main {
+  margin: auto;
+  text-align: center;
+}
+#input-form{
+  border-style: double;
+  border-width: thick;
+  width: 400px;
+  margin: auto;
+}
+.form-element{
+  margin: 10px;
+}
 p {
     border-style: double;
     border-width: thick;
