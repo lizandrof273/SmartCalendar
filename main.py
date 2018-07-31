@@ -3,14 +3,14 @@ import jinja2
 import os
 from google.appengine.api import users
 import urllib
+from google.appengine.ext import ndb
 
 user = users.get_current_user()
 
 if user:
-    nickname = user.nickname()
     logout_url = users.create_logout_url('/')
-    greeting = ('Welcome, %s! (<a href="%s">sign out</a>)'
-                % (nickname, logout_url))
+    greeting = ('Welcome! (<a href="%s">sign out</a>)'
+                % logout_url)
 else:
     login_url = users.create_login_url('/')
     greeting = '<a href="%s">Sign in</a>' % (login_url,)
@@ -44,5 +44,4 @@ Event(organizer=user.user_id(), title="CSSI Presentations")
 
 app = webapp2.WSGIApplication([
     ('/', EnterInfoHandler),
-    ('/calendar', ShowCalendarHandler),
 ], debug = True)
