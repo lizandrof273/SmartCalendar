@@ -15,6 +15,7 @@
     <h2>
     <center>Welcome to the Smart Calendar!</center>
     </h2>
+<<<<<<< HEAD
       <center> Event Name: </center>
     <center><input type="text" name="ConcreteEvents" value="{{ConcreteEvents}}"></center>
     <br>
@@ -30,6 +31,14 @@
      <center><option value="FlexibleEvents"> Flexible Events</center></option>
     </select>
   <center><input type="submit" value="Go!"></center>
+=======
+    <form method="post" action="/Calendar">
+      <center> Concrete Events: </center>
+    <center><input type="text" name="ConcreteEvents" value="{{ConcreteEvents}}"></center>
+    <center> Flexible Events: </center>
+    <center><input type="text" name="FlexibleEvents" value={{FlexibleEvents}}></center>
+    <center><input type="submit" value="Go!"></center>
+>>>>>>> ec17bd07fe64b03b0ab41bade92b3e6217c68715
     </form>
   </body>
 </html>
