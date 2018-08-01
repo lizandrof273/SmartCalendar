@@ -41,7 +41,7 @@ class Event(ndb.Model):
 #Event(organizer=user.user_id(), title="CSSI Presentations")
 
 current_day_of_week = datetime.date.today().strftime("%A")
-  if current_day_of_week == 'Sunday':
+if current_day_of_week == 'Sunday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +1
       tue_date = int(date) +2
@@ -50,7 +50,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = int(date) +5
       sat_date = int(date) +6
       sun_date = date
-  if current_day_of_week == 'Monday:
+if current_day_of_week == 'Monday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = date
       tue_date = int(date) +1
@@ -59,7 +59,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = int(date) +4
       sat_date = int(date) +5
       sun_date = int(date) +6
-  if current_day_of_week == 'Tuesday':
+if current_day_of_week == 'Tuesday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +6
       tue_date = date
@@ -68,7 +68,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = int(date) +3
       sat_date = int(date) +4
       sun_date = int(date) +5
-  if current_day_of_week == 'Wednesday':
+if current_day_of_week == 'Wednesday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +5
       tue_date = int(date) +6
@@ -77,7 +77,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = int(date) +2
       sat_date = int(date) +3
       sun_date = int(date) +4
-  if current_day_of_week == 'Thursday':
+if current_day_of_week == 'Thursday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +4
       tue_date = int(date) +5
@@ -86,7 +86,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = int(date) +1
       sat_date = int(date) +2
       sun_date = int(date) +3
-  if current_day_of_week == 'Friday':
+if current_day_of_week == 'Friday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +3
       tue_date = int(date) +4
@@ -95,7 +95,7 @@ current_day_of_week = datetime.date.today().strftime("%A")
       fri_date = date
       sat_date = int(date) +1
       sun_date = int(date) +2
-  if current_day_of_week == 'Saturday':
+if current_day_of_week == 'Saturday':
       date = datetime.datetime.now().strftime("%y%m%d")
       mon_date = int(date) +2
       tue_date = int(date) +3
