@@ -24,14 +24,19 @@ class EnterInfoHandler(webapp2.RequestHandler):
             greeting = 'login'
         welcome_template = JINJA_ENVIRONMENT.get_template('templates/index.html')
         self.response.write(welcome_template.render({'auth_url': auth_url, 'greeting':greeting}))
-#class ShowCalendarHandler(webapp2.RequestHandler):
-#    def post(self):
-#        template_vars = {
-#            'concrete': self.request.get('ConcreteEvents'),
-#            'flexible': self.request.get('FlexibleEvents')
-#        }
-#        results_template = JINJA_ENVIRONMENT.get_template('template/results.html')
-#        self.response.write(results_template.render(template_vars))
+class ShowCalendarHandler(webapp2.RequestHandler):
+    def post(self):
+        template_vars = {
+            'monday': self.request.get('Monday'),
+            'tuesday': self.request.get('Tuesday'),
+            'wednesday': self.request.get('Wednesday'),
+            'thursday': self.request.get('Thursday'),
+            'friday': self.request.get('Friday'),
+            'saturday': self.request.get('Saturday'),
+            'sunday': self.request.get('Sunday'),
+        }
+        results_template = JINJA_ENVIRONMENT.get_template('template/index.html')
+        self.response.write(results_template.render(template_vars))
 
 
 class Event(ndb.Model):
@@ -106,4 +111,5 @@ if current_day_of_week == 'Saturday':
       sun_date = int(date) +1
 app = webapp2.WSGIApplication([
     ('/', EnterInfoHandler),
+    ('/ShowCalendarHandler', ShowCalendarHandler)
 ], debug = True)

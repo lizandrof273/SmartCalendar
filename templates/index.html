@@ -3,14 +3,14 @@
 <html>
 
 <head>
-    <a href="{{auth_url}}">{{greeting}}</a>
 
   <title>Calendar</title>
-  <script type="text/python" src="main.py"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+  <a href="{{auth_url}}">{{greeting}}</a>
+
   <div id="main">
     <div id="Calendar">
       <p id="Calendar-day"></p>
@@ -18,9 +18,9 @@
       <p id="Calendar-month-year"></p>
     </div>
     <h2>
-    Welcome to the Smart Calendar!
-  </h2>
-    <div id="input-form">
+      Welcome to the Smart Calendar!
+    </h2>
+    <form id="input-form" action="/ShowCalendarHandler">
       <div class="form-element">
         <label>Event Name:</label>
         <input type="text" name="ConcreteEvents">
@@ -28,9 +28,9 @@
       <div class="form-element">
         <label>Event Type:</label>
         <select name="event-type" id="event-type">
-         <option value="">Select One ...</option>
-         <option value="ConcreteEvents">Concrete Events
-         <option value="FlexibleEvents"> Flexible Events</option>
+           <option value="">Select One ...</option>
+           <option value="ConcreteEvents">Concrete Events
+           <option value="FlexibleEvents"> Flexible Events</option>
         </select>
       </div>
       <div id="concrete-inputs">
@@ -39,30 +39,31 @@
           <input type="time" name="EventTime">
         </div>
         <div>
-        <label>Event End Time:</label>
-        <input type="time" name="EventTime">
-      </div>
-        <div class="form-element"></div>
-        <label>Event Date:</label>
-        <input type="date" name="EventDate">
-        <div>
-          <lable>Days of the week:</label>
+          <label>Event End Time:</label>
+          <input type="time" name="EventTime">
         </div>
-        <input type=""="checkbox" name="days" id="Sunday" value="Sunday"> Sunday
-        <input type="checkbox" name="days" id="Monday" value="Monday"> Monday
-        <input type="checkbox" name="days" id="Tuesday" value="Tuesday"> Tuesday
-        <br>
-        <input type="checkbox" name="days" id="Wednesday" value="Wednesday"> Wednesday
-        <input type="checkbox" name="days" id="Thursday" vaule="Thursday"> Thursday
-        <input type="checkbox" name="days" id="Friday" value="Friday"> Friday
-        <input type="checkbox" name="days" id="Saturday" value="Saturday"> Saturday
-      </form>
+        <div class="form-element">
+          <label>Event Date:</label>
+          <input type="date" name="EventDate">
+        </div>
+        <div>
+          <label>Days of the week:</label>
+        </div>
+        <div>
+          <input type=""="checkbox" name="Sunday" id="Sunday" value="Sunday"> Sunday
+          <input type="checkbox" name="Monday" id="Monday" value="Monday"> Monday
+          <input type="checkbox" name="Tuesday" id="Tuesday" value="Tuesday"> Tuesday
+          <br>
+          <input type="checkbox" name="Wednesday" id="Wednesday" value="Wednesday"> Wednesday
+          <input type="checkbox" name="Thursday" id="Thursday" vaule="Thursday"> Thursday
+          <input type="checkbox" name="Friday" id="Friday" value="Friday"> Friday
+          <input type="checkbox" name="Saturday" id="Saturday" value="Saturday"> Saturday
+        </div>
         <div>
           <input type="submit" value="Submit">
         </div>
       </div>
       <div id="flexible-inputs">
-        </form>
         <div class="form-element">
           <label>Weekly amount allotted for the event (hours):</label>
           <input type="text" name="Eventamount">
@@ -71,10 +72,9 @@
           </div>
         </div>
       </div>
-      </form>
-    </div>
+    </form>
   </div>
-    <script type="text/javascript">
+  <script type="text/javascript">
     document.getElementById("concrete-inputs").classList.add('hidden');
     document.getElementById("flexible-inputs").classList.add('hidden');
     let selectEl = document.getElementById('event-type');
@@ -96,9 +96,9 @@
         document.getElementById("concrete-inputs").classList.add('hidden');
         document.getElementById("flexible-inputs").classList.add('hidden');
         console.log("I changed flexible");
-    }
-  })
-    </script>
+      }
+    })
+  </script>
 </body>
 
 </html>
