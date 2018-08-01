@@ -114,6 +114,7 @@ app = webapp2.WSGIApplication([
     ('/ShowCalendarHandler', ShowCalendarHandler)
 ], debug = True)
 
+
 dict_mon = {
 "0": "",
 "1": "",
@@ -310,5 +311,72 @@ dict_sun = {
 "24": "",
 }
 
-if dict_mon in range(24) == none:
-    none += FlexibleEvent1
+for i in range(25):
+    if dict_mon == "" and flextime == 1:
+        dict_mon[str(i)] = "event"
+    elif dict_mon == "" and flextime == 2:
+        if i+1 == none
+        dict_mon[str(i)] = "event"
+    elif dict_mon != "" and flextime == 3:
+        if i+1 == none
+        dict_mon[str(i)] = "event"
+
+for i in range(25):
+    if dict_tues == "" and flextime == 1:
+        dict_tues[str(i)] = "event"
+    elif dict_tues == "" and flextime == 2:
+        if i+1 == none
+        dict_tues[str(i)] = "event"
+    elif dict_tues != "" and flextime == 3:
+        if i+1 == none
+        dict_tues[str(i)] = "event"
+
+for i in range(25):
+    if dict_wed == "" and flextime == 1:
+        dict_wed[str(i)] = "event"
+    elif dict_wed == "" and flextime == 2:
+        if i+1 == none
+        dict_wed[str(i)] = "event"
+    elif dict_wed != "" and flextime == 3:
+        if i+1 == none
+        dict_wed[str(i)] = "event"
+
+for i in range(25):
+    if dict_thur == "" and flextime == 1:
+        dict_mon[str(i)] = "event"
+    elif dict_thur == "" and flextime == 2:
+        if i+1 == none
+        dict_thur[str(i)] = "event"
+    elif dict_mon != "" and flextime == 3:
+        if i+1 == none
+        dict_thur[str(i)] = "event"
+
+for i in range(25):
+    if dict_fri == "" and flextime == 1:
+        dict_fri[str(i)] = "event"
+    elif dict_fri== "" and flextime == 2:
+        if i+1 == none
+        dict_fri[str(i)] = "event"
+    elif dict_fri != "" and flextime == 3:
+        if i+1 == none
+        dict_fri[str(i)] = "event"
+
+for i in range(25):
+    if dict_sat == "" and flextime == 1:
+        dict_sat[str(i)] = "event"
+    elif dict_sat == "" and flextime == 2:
+        if i+1 == none
+        dict_sat[str(i)] = "event"
+    elif dict_sat != "" and flextime == 3:
+        if i+1 == none
+        dict_sat[str(i)] = "event"
+
+for i in range(25):
+    if dict_sun == "" and flextime == 1:
+        dict_sun[str(i)] = "event"
+    elif dict_sun == "" and flextime == 2:
+        if i+1 == none
+        dict_sun[str(i)] = "event"
+    elif dict_sun != "" and flextime == 3:
+        if i+1 == none
+        dict_sun[str(i)] = "event"
