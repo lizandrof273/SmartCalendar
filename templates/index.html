@@ -20,7 +20,7 @@
     <h2>
       Welcome to the Smart Calendar!
     </h2>
-    <form id="input-form" action="/ShowCalendarHandler">
+    <form id="input-form" action="/ShowCalendarHandler" method="POST">
       <div class="form-element">
         <label>Event Name:</label>
         <input type="text" name="ConcreteEvents">
@@ -50,14 +50,14 @@
           <label>Days of the week:</label>
         </div>
         <div>
-          <input type="checkbox" name="Sunday" id="Sunday" value="Sunday"> Sunday
-          <input type="checkbox" name="Monday" id="Monday" value="Monday"> Monday
-          <input type="checkbox" name="Tuesday" id="Tuesday" value="Tuesday"> Tuesday
+          <input type="checkbox" name="daysOfWeek" id="Sunday" value="Sunday"> Sunday
+          <input type="checkbox" name="daysOfWeek" id="Monday" value="Monday"> Monday
+          <input type="checkbox" name="daysOfWeek" id="Tuesday" value="Tuesday"> Tuesday
           <br>
-          <input type="checkbox" name="Wednesday" id="Wednesday" value="Wednesday"> Wednesday
-          <input type="checkbox" name="Thursday" id="Thursday" value="Thursday"> Thursday
-          <input type="checkbox" name="Friday" id="Friday" value="Friday"> Friday
-          <input type="checkbox" name="Saturday" id="Saturday" value="Saturday"> Saturday
+          <input type="checkbox" name="daysOfWeek" id="Wednesday" value="Wednesday"> Wednesday
+          <input type="checkbox" name="daysOfWeek" id="Thursday" value="Thursday"> Thursday
+          <input type="checkbox" name="daysOfWeek" id="Friday" value="Friday"> Friday
+          <input type="checkbox" name="daysOfWeek" id="Saturday" value="Saturday"> Saturday
         </div>
         <div>
           <input type="submit" value="Submit">

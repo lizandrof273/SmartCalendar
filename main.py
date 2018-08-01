@@ -26,6 +26,7 @@ class EnterInfoHandler(webapp2.RequestHandler):
         self.response.write(welcome_template.render({'auth_url': auth_url, 'greeting':greeting}))
 class ShowCalendarHandler(webapp2.RequestHandler):
     def post(self):
+        days_of_week = self.request.get_all('daysOfWeek')
         template_vars = {
             'monday': self.request.get('Monday'),
             'tuesday': self.request.get('Tuesday'),
@@ -371,6 +372,7 @@ for i in range(25):
         if i+1 == None:
             dict_sat[str(i)] = "event"
 
+<<<<<<< Updated upstream
 for i in range(25):
     if dict_sun == "" and flextime == 1:
         dict_sun[str(i)] = "event"
@@ -380,3 +382,7 @@ for i in range(25):
     elif dict_sun != "" and flextime == 3:
         if i+1 == None:
             dict_sun[str(i)] = "event"
+=======
+if dict_mon in range(0, 25) == none:
+    none += FlexibleEvent1
+>>>>>>> Stashed changes
