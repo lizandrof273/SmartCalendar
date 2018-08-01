@@ -55,7 +55,7 @@
           <input type="checkbox" name="Tuesday" id="Tuesday" value="Tuesday"> Tuesday
           <br>
           <input type="checkbox" name="Wednesday" id="Wednesday" value="Wednesday"> Wednesday
-          <input type="checkbox" name="Thursday" id="Thursday" vaule="Thursday"> Thursday
+          <input type="checkbox" name="Thursday" id="Thursday" value="Thursday"> Thursday
           <input type="checkbox" name="Friday" id="Friday" value="Friday"> Friday
           <input type="checkbox" name="Saturday" id="Saturday" value="Saturday"> Saturday
         </div>
@@ -98,6 +98,70 @@
         console.log("I changed flexible");
       }
     })
+    let monbox = document.querySelector('input[value="Monday"]');
+    let tuesbox = document.querySelector('input[value="Tuesday"]');
+    let wedbox = document.querySelector('input[value="Wednesday"]');
+    let thursbox = document.querySelector('input[value="Thursday"]');
+    let fribox = document.querySelector('input[value="Friday"]');
+    let satbox = document.querySelector('input[value="Saturday"]');
+    let sunbox = document.querySelector('input[value="Sunday"]');
+    let moncheck = false;
+    let tuescheck = false;
+    let wedcheck = false;
+    let thurscheck = false;
+    let fricheck = false;
+    let satcheck = false;
+    let suncheck = false;
+
+    monbox.addEventListener('change', () => {
+      if(monbox.checked){
+        console.log("I was checked");
+        moncheck = true;
+      }
+    })
+
+    tuesbox.addEventListener('change', () => {
+      if(tuesbox.checked){
+        console.log("I was checked");
+        tuescheck = true;
+      }
+    })
+
+    wedbox.addEventListener('change', () => {
+      if(wedbox.checked){
+        console.log("I was checked");
+        wedcheck = true;
+      }
+    })
+
+    thursbox.addEventListener('change', () => {
+      if(thursbox.checked){
+        console.log("I was checked");
+        thurscheck = true;
+      }
+    })
+
+    fribox.addEventListener('change', () => {
+      if(fribox.checked){
+        console.log("I was checked");
+        fricheck = true;
+      }
+    })
+
+    satbox.addEventListener('change', () => {
+      if(satbox.checked){
+        console.log("I was checked");
+        satcheck = true;
+      }
+    })
+
+    sunbox.addEventListener('change', () => {
+      if(sunbox.checked){
+        console.log("I was checked");
+        suncheck = true;
+      }
+    })
+
   </script>
 </body>
 
