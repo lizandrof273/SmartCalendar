@@ -110,11 +110,6 @@ if current_day_of_week == 'Saturday':
       fri_date = int(date) +6
       sat_date = date
       sun_date = int(date) +1
-app = webapp2.WSGIApplication([
-    ('/', EnterInfoHandler),
-    ('/ShowCalendarHandler', ShowCalendarHandler)
-], debug = True)
-
 
 dict_mon = {
 "0": "",
@@ -372,7 +367,6 @@ for i in range(25):
         if i+1 == None:
             dict_sat[str(i)] = "event"
 
-<<<<<<< Updated upstream
 for i in range(25):
     if dict_sun == "" and flextime == 1:
         dict_sun[str(i)] = "event"
@@ -382,7 +376,8 @@ for i in range(25):
     elif dict_sun != "" and flextime == 3:
         if i+1 == None:
             dict_sun[str(i)] = "event"
-=======
-if dict_mon in range(0, 25) == none:
-    none += FlexibleEvent1
->>>>>>> Stashed changes
+
+app = webapp2.WSGIApplication([
+    ('/', EnterInfoHandler),
+    ('/ShowCalendar', ShowCalendarHandler)
+], debug = True)

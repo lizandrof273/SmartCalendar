@@ -20,7 +20,7 @@
     <h2>
       Welcome to the Smart Calendar!
     </h2>
-    <form id="input-form" action="/ShowCalendarHandler" method="POST">
+    <form id="input-form" action="/ShowCalendar" method="POST">
       <div class="form-element">
         <label>Event Name:</label>
         <input type="text" name="ConcreteEvents">
@@ -96,69 +96,6 @@
         document.getElementById("concrete-inputs").classList.add('hidden');
         document.getElementById("flexible-inputs").classList.add('hidden');
         console.log("I changed flexible");
-      }
-    })
-    let monbox = document.querySelector('input[value="Monday"]');
-    let tuesbox = document.querySelector('input[value="Tuesday"]');
-    let wedbox = document.querySelector('input[value="Wednesday"]');
-    let thursbox = document.querySelector('input[value="Thursday"]');
-    let fribox = document.querySelector('input[value="Friday"]');
-    let satbox = document.querySelector('input[value="Saturday"]');
-    let sunbox = document.querySelector('input[value="Sunday"]');
-    let moncheck = false;
-    let tuescheck = false;
-    let wedcheck = false;
-    let thurscheck = false;
-    let fricheck = false;
-    let satcheck = false;
-    let suncheck = false;
-
-    monbox.addEventListener('change', () => {
-      if(monbox.checked){
-        console.log("I was checked");
-        moncheck = true;
-      }
-    })
-
-    tuesbox.addEventListener('change', () => {
-      if(tuesbox.checked){
-        console.log("I was checked");
-        tuescheck = true;
-      }
-    })
-
-    wedbox.addEventListener('change', () => {
-      if(wedbox.checked){
-        console.log("I was checked");
-        wedcheck = true;
-      }
-    })
-
-    thursbox.addEventListener('change', () => {
-      if(thursbox.checked){
-        console.log("I was checked");
-        thurscheck = true;
-      }
-    })
-
-    fribox.addEventListener('change', () => {
-      if(fribox.checked){
-        console.log("I was checked");
-        fricheck = true;
-      }
-    })
-
-    satbox.addEventListener('change', () => {
-      if(satbox.checked){
-        console.log("I was checked");
-        satcheck = true;
-      }
-    })
-
-    sunbox.addEventListener('change', () => {
-      if(sunbox.checked){
-        console.log("I was checked");
-        suncheck = true;
       }
     })
 
