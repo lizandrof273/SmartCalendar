@@ -27,15 +27,16 @@ class EnterInfoHandler(webapp2.RequestHandler):
 class ShowCalendarHandler(webapp2.RequestHandler):
     def post(self):
         event_name = self.request.get('EventName')
-        days_of_week = self.request.get_all('daysOfWeek')
+        #days_of_week = self.request.get_all('daysOfWeek')
         flextime = self.request.get('Eventamount')
         conc_start_time = str(self.request.get('EventStartTime'))
         conc_end_time = str(self.request.get('EventEndTime'))
         event_date = str(self.request.get('EventDate'))
         flex_event_freq = self.request.get('EventFreq')
-        print ("********** REQUEST " + conc_start_time)
+        print ("********** REQUEST " + flextime)
 
-        if flextime != '1' or flextime != '2':
+        if not (flextime == '1' or flextime == '2'):
+            print ("********** we are changing flextime!!!")
             flextime = "0"
             flex_event_freq = "0"
 
@@ -43,12 +44,14 @@ class ShowCalendarHandler(webapp2.RequestHandler):
             #conc_start_num = "02:00"
             #conc_end_num = "03:00"
 
-
+        print ("************ REQUEST2 " + flextime)
         if flextime == "0":
-            conc_start_time = conc_start_time[0:2]
-            conc_end_time = conc_end_time[0:2]
-            conc_start_num = int(conc_start_time)
-            conc_end_num = int(conc_end_time)
+            conc_start_time_hr = conc_start_time.split(':')[0]
+            conc_end_time_hr = conc_end_time.split(':')[0]
+            conc_start_time_min = conc_start_time.split(':')[1]
+            conc_end_time_min = conc_end_time.split(':')[1]
+            conc_start_num = int(conc_start_time_hr)
+            conc_end_num = int(conc_end_time_hr)
 
             if conc_start_num > 12:
                 conc_start_num = str(((conc_start_num - 12) *100) -100)
@@ -59,8 +62,8 @@ class ShowCalendarHandler(webapp2.RequestHandler):
             if conc_start_num == 12:
                 conc_start_num = str(conc_start_num)
 
-            start_time_url = conc_start_num[0:2] + conc_start_num[3:5]
-            end_time_url = conc_end_num[0:2] + conc_end_num[3:5]
+            start_time_url = str(conc_start_num) + conc_start_time_min
+            end_time_url = str(conc_end_num) + conc_end_time_min
             date_url = event_date[0:4] + event_date[5:7] + event_date[8:10]
 
         params = urllib.urlencode({'text': event_name})
@@ -68,7 +71,7 @@ class ShowCalendarHandler(webapp2.RequestHandler):
         #start_date_time = datetime.datetime.strptime(str(event_date) + "T" + str(conc_start_time), '%Y-%m-%dT%H:%M')
         #end_date_time = datetime.datetime.strptime(str(event_date) + "T" + str(conc_end_time), '%Y-%m-%dT%H:%M')
         if flextime == "0":
-            new_url = "https://www.google.com/calendar/render?action=TEMPLATE&" + params + "&dates=" + date_url + "T2" + start_time_url + "000Z/" + date_url + "T2" + end_time_url + "000Z"
+            new_url = "https://www.google.com/calendar/render?action=TEMPLATE&" + params + "&dates=" + date_url + "T2" + start_time_url + "Z/" + date_url + "T2" + end_time_url + "Z"
         if flextime == '1':
             new_url = "https://www.google.com/calendar/render?action=TEMPLATE&" + params + "&dates=20180807T240000Z/20180807T250000Z"
         if flextime == '2':
