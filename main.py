@@ -27,7 +27,7 @@ class EnterInfoHandler(webapp2.RequestHandler):
 class ShowCalendarHandler(webapp2.RequestHandler):
     def post(self):
         event_name = self.request.get('EventName')
-        days_of_week = self.request.get_all('daysOfWeek')
+        #days_of_week = self.request.get_all('daysOfWeek')
         flextime = self.request.get('Eventamount')
         conc_start_time = str(self.request.get('EventStartTime'))
         conc_end_time = str(self.request.get('EventEndTime'))
