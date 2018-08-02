@@ -1,0 +1,17 @@
+body {
+    background-color: LemonChiffon;
+}
+body {
+    border-style: double;
+    border-width: thick;
+}
+
+h1 {
+    font-size: 40px;
+    color: black;
+}
+
+h2 {
+  border-style: double;
+  border-width: thick;
+}
